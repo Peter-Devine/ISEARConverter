@@ -20,7 +20,7 @@ fraction = 0.2
 np.random.seed(seed=42)
 
 test_indices = np.random.choice(ISEAR_dataframe.index, size=int(round(fraction*ISEAR_dataframe.shape[0])), replace=False)
-train_indices = emobank.index.difference(test_indices)
+train_indices = ISEAR_dataframe.index.difference(test_indices)
 dev_indices = np.random.choice(train_indices, size=int(round(fraction*len(train_indices))), replace=False)
 train_indices = train_indices.difference(dev_indices)
 
