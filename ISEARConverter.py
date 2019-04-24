@@ -2,6 +2,7 @@
 import argparse
 import os
 import pandas as pd
+import numpy as np
 
 # Takes input and output directories as arguments
 parser=argparse.ArgumentParser()
